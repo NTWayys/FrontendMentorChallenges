@@ -1,0 +1,115 @@
+body {
+  height: 100vh;
+  background: hsl(185deg, 75%, 39%);
+  overflow: hidden;
+}
+body .background-img-container-top {
+  background-image: url(bg-pattern-top.svg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  transform: translate(-50% -50%);
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: -50%;
+}
+body .background-img-container-bottom {
+  background-image: url(bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: -50%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.container .outer-card {
+  height: 22rem;
+  width: 18rem;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 10px 2px #888888;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 35% 45% 20%;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-content: center;
+  align-items: center;
+}
+.container .outer-card .lighter-text {
+  color: hsl(227deg, 10%, 46%);
+}
+.container .outer-card .blue-bg {
+  grid-area: 1/1/2/2;
+  width: 100%;
+  height: 100%;
+  background-image: url(bg-pattern-card.svg);
+}
+.container .outer-card .profile-info {
+  grid-area: 2/1/3/2;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translate(0, -20%);
+}
+.container .outer-card .profile-info div {
+  width: 100%;
+  padding: 1.5rem 0;
+  margin-bottom: 1rem;
+  line-height: 2rem;
+  text-align: center;
+}
+.container .outer-card .profile-info div h3 {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+.container .outer-card .profile-info div h3 span {
+  font-weight: 400;
+  font-size: 1rem;
+}
+.container .outer-card .profile-info img {
+  transform: translate(0, 15%);
+  border: 0.4rem solid white;
+  border-radius: 50%;
+}
+.container .outer-card .profile-stats {
+  grid-area: 3/1/4/2;
+  height: 100%;
+  border-top: 1px solid hsl(0deg, 0%, 59%);
+  margin-top: 0;
+  padding: 1rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.container .outer-card .profile-stats p {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+.container .outer-card .profile-stats p span {
+  font-weight: 400;
+  font-size: 1rem;
+}/*# sourceMappingURL=index.css.map */

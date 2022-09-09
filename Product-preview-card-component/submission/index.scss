@@ -1,0 +1,111 @@
+// Colors
+
+$Dark-cyan: hsl(158, 36%, 37%);
+$Cream: hsl(30, 38%, 92%);
+$Very-dark-blue: hsl(212, 21%, 14%);
+$Dark-grayish-blue: hsl(228, 12%, 48%);
+$White: hsl(0, 0%, 100%);
+$MobileWidth: 700px;
+* {
+  margin: 0%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Fonts
+// font-family: 'Fraunces', serif;
+// font-family: 'Montserrat', sans-serif;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: $Dark-grayish-blue;
+
+  background: $Cream;
+}
+
+.item-card {
+  max-width: 36rem;
+  margin: 1rem;
+  background: $White;
+  border-radius: 10px;
+  overflow: hidden;
+  display: grid;
+  grid-template: 1fr 1.6fr / 21.5rem;
+  @media (width > $MobileWidth) {
+    height: 27rem;
+    grid-template: auto / repeat(2, 1fr);
+  }
+
+  .item-card-image-div {
+    background-image: url(image-product-mobile.jpg);
+    @media (width > $MobileWidth) {
+      background-image: url(image-product-desktop.jpg);
+    }
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+
+  .item-card-info {
+    padding: 1.5rem;
+
+    .spaced-letters {
+      letter-spacing: 0.2rem;
+    }
+
+    h2 {
+      font-family: "Fraunces", serif;
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 0.85;
+      padding: 1rem 0.2rem;
+      color: $Very-dark-blue;
+    }
+
+    p {
+      padding: 1rem 0;
+      line-height: 1.5;
+    }
+    .item-card-pricing-block {
+      display: flex;
+      align-items: center;
+      .item-card-pricing {
+        font-family: "Fraunces", serif;
+        color: $Dark-cyan;
+        font-size: 2rem;
+        margin-right: 1rem;
+      }
+      span {
+        text-decoration: line-through;
+      }
+    }
+    .item-card-add-cart-btn {
+      background: $Dark-cyan;
+      cursor: pointer;
+      width: 100%;
+      padding: 1rem;
+      border-style: none;
+      border-radius: 10px;
+      color: $White;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        margin-right: 1rem;
+      }
+
+      &:hover {
+        // filter: brightness(70%); ?
+        background: $Very-dark-blue;
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+* {
+  margin: 0%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: hsl(228deg, 12%, 48%);
+  background: hsl(30deg, 38%, 92%);
+}
+
+.item-card {
+  max-width: 36rem;
+  margin: 1rem;
+  background: hsl(0deg, 0%, 100%);
+  border-radius: 10px;
+  overflow: hidden;
+  display: grid;
+  grid-template: 1fr 1.6fr/21.5rem;
+}
+@media (width > 700px) {
+  .item-card {
+    height: 27rem;
+    grid-template: auto/repeat(2, 1fr);
+  }
+}
+.item-card .item-card-image-div {
+  background-image: url(image-product-mobile.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+@media (width > 700px) {
+  .item-card .item-card-image-div {
+    background-image: url(image-product-desktop.jpg);
+  }
+}
+.item-card .item-card-info {
+  padding: 1.5rem;
+}
+.item-card .item-card-info .spaced-letters {
+  letter-spacing: 0.2rem;
+}
+.item-card .item-card-info h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 0.85;
+  padding: 1rem 0.2rem;
+  color: hsl(212deg, 21%, 14%);
+}
+.item-card .item-card-info p {
+  padding: 1rem 0;
+  line-height: 1.5;
+}
+.item-card .item-card-info .item-card-pricing-block {
+  display: flex;
+  align-items: center;
+}
+.item-card .item-card-info .item-card-pricing-block .item-card-pricing {
+  font-family: "Fraunces", serif;
+  color: hsl(158deg, 36%, 37%);
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+.item-card .item-card-info .item-card-pricing-block span {
+  text-decoration: line-through;
+}
+.item-card .item-card-info .item-card-add-cart-btn {
+  background: hsl(158deg, 36%, 37%);
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem;
+  border-style: none;
+  border-radius: 10px;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item-card .item-card-info .item-card-add-cart-btn img {
+  margin-right: 1rem;
+}
+.item-card .item-card-info .item-card-add-cart-btn:hover {
+  background: hsl(212deg, 21%, 14%);
+}/*# sourceMappingURL=index.css.map */

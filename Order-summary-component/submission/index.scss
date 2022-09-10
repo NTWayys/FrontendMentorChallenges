@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$Pale-blue: hsl(225, 100%, 94%);
+$Bright-blue: hsl(245, 75%, 52%);
+$White: #fff;
+$purple: #766cf1;
+$Very-pale-blue: hsl(225, 100%, 98%);
+$Desaturated-blue: hsl(224, 23%, 55%);
+$Dark-blue: hsl(223, 47%, 23%);
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  background: $Pale-blue;
+  font-family: "Red Hat Display", sans-serif;
+  //  Weights: 500, 700, 900
+  color: $Desaturated-blue;
+}
+
+.order-summary-card {
+  width: 23rem;
+  margin: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  background: $White;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .ordorder-summary-img {
+    img {
+      width: 100%;
+    }
+  }
+
+  .order-summary-info {
+    padding: 2rem;
+    text-align: center;
+
+    .order-summary-text {
+      h4 {
+        color: $Dark-blue;
+        font-weight: 900;
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 500;
+      }
+      margin-bottom: 1.5rem;
+    }
+
+    .plan-choice {
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      background: $Very-pale-blue;
+
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 1rem;
+      }
+      p {
+        font-weight: 900;
+        color: $Dark-blue;
+      }
+      a {
+        margin-left: auto;
+        // text-decoration: none;
+        color: $Bright-blue;
+
+        &:hover {
+          color: $purple;
+          text-decoration: none;
+        }
+      }
+    }
+    .btn {
+      background-color: $Bright-blue;
+      &:hover {
+        background: $purple;
+      }
+      color: $White;
+      width: 100%;
+      padding: 0.75rem;
+      border-style: none;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      cursor: pointer;
+
+      box-shadow: 0 1rem 5px $Pale-blue;
+    }
+    .cancel-btn {
+      text-decoration: none;
+      color: $Desaturated-blue;
+      &:hover {
+        color: $Dark-blue;
+      }
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+  }
+}

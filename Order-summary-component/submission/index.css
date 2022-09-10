@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: hsl(225deg, 100%, 94%);
+  font-family: "Red Hat Display", sans-serif;
+  color: hsl(224deg, 23%, 55%);
+}
+
+.order-summary-card {
+  width: 23rem;
+  margin: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.order-summary-card .ordorder-summary-img img {
+  width: 100%;
+}
+.order-summary-card .order-summary-info {
+  padding: 2rem;
+  text-align: center;
+}
+.order-summary-card .order-summary-info .order-summary-text {
+  margin-bottom: 1.5rem;
+}
+.order-summary-card .order-summary-info .order-summary-text h4 {
+  color: hsl(223deg, 47%, 23%);
+  font-weight: 900;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+.order-summary-card .order-summary-info .order-summary-text p {
+  font-size: 16px;
+  font-weight: 500;
+}
+.order-summary-card .order-summary-info .plan-choice {
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background: hsl(225deg, 100%, 98%);
+  display: flex;
+  align-items: center;
+}
+.order-summary-card .order-summary-info .plan-choice img {
+  margin-right: 1rem;
+}
+.order-summary-card .order-summary-info .plan-choice p {
+  font-weight: 900;
+  color: hsl(223deg, 47%, 23%);
+}
+.order-summary-card .order-summary-info .plan-choice a {
+  margin-left: auto;
+  color: hsl(245deg, 75%, 52%);
+}
+.order-summary-card .order-summary-info .plan-choice a:hover {
+  color: #766cf1;
+  text-decoration: none;
+}
+.order-summary-card .order-summary-info .btn {
+  background-color: hsl(245deg, 75%, 52%);
+  color: #fff;
+  width: 100%;
+  padding: 0.75rem;
+  border-style: none;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  box-shadow: 0 1rem 5px hsl(225deg, 100%, 94%);
+}
+.order-summary-card .order-summary-info .btn:hover {
+  background: #766cf1;
+}
+.order-summary-card .order-summary-info .cancel-btn {
+  text-decoration: none;
+  color: hsl(224deg, 23%, 55%);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.order-summary-card .order-summary-info .cancel-btn:hover {
+  color: hsl(223deg, 47%, 23%);
+}/*# sourceMappingURL=index.css.map */

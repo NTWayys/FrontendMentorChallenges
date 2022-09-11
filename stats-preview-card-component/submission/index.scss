@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$Very-dark-blue: hsl(233, 47%, 7%);
+$Dark-desaturated-blue: hsl(244, 38%, 16%);
+$Soft-violet: hsl(277, 64%, 61%);
+
+$White: hsl(0, 0%, 100%);
+$Slightly-transparent-white-p: hsla(0, 0%, 100%, 0.75);
+$Slightly-transparent-white-s: hsla(0, 0%, 100%, 0.6);
+
+// font-family: 'Inter', sans-serif; 400 / 700
+// font-family: 'Lexend Deca', sans-serif; 400
+body {
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  background: $Very-dark-blue;
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.business-info-card {
+  background: $Dark-desaturated-blue;
+
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 1rem;
+
+  display: flex;
+
+  .info-card-hero-image {
+    position: relative;
+    width: 100%;
+    .info-card-hero-image-color {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: $Soft-violet;
+      opacity: 44%;
+    }
+    .info-card-hero-image {
+      width: 100%;
+      background: url(image-header-mobile.jpg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+  }
+  @media (width < 1000px) {
+    text-align: center;
+    width: 20rem;
+    flex-direction: column;
+    .info-card-hero-image {
+      min-height: 14rem;
+    }
+  }
+  @media (width > 1000px) {
+    width: 60rem;
+    .info-card-hero-image {
+      order: 2;
+      background: url(image-header-desktop.jpg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    .info-card-info {
+      h2 {
+        padding: 0;
+      }
+    }
+  }
+
+  .info-card-info {
+    margin-top: 2rem;
+    padding: 0 2rem;
+    h2 {
+      color: $White;
+      font-weight: 400;
+      font-family: "Lexend Deca", sans-serif;
+      padding: 0 1rem;
+      span {
+        color: $Soft-violet;
+      }
+    }
+    > p {
+      line-height: 1.5rem;
+      margin-top: 1rem;
+      color: $Slightly-transparent-white-p;
+    }
+
+    .info-card-stats {
+      margin: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      @media (width > 1000px) {
+        flex-direction: row;
+        width: 100%;
+
+        justify-content: space-between;
+      }
+      p {
+        // margin-top: 1rem;
+        font-family: "Lexend Deca", sans-serif;
+        color: $White;
+        font-size: 1.5rem;
+        span {
+          font-family: "Inter", sans-serif;
+          font-size: 0.85rem;
+          margin-top: 0.5rem;
+          color: $Slightly-transparent-white-s;
+          display: block;
+        }
+      }
+    }
+  }
+  @media (width > 1000px) {
+    gap: 5rem;
+    .info-card-info {
+      width: 50rem;
+      margin: 0;
+      padding: 2rem;
+      h2 {
+        font-size: 2rem;
+        padding: 0;
+      }
+    }
+
+    .info-card-stats {
+      padding-top: 2rem;
+      // background: red;
+    }
+  }
+}

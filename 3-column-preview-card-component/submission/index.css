@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0deg, 0%, 95%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-size: 15px;
+}
+
+.card-set {
+  margin: 0 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+}
+.card-set .card {
+  padding: 3rem 3.8rem;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.card-set .card h3 {
+  margin: 1rem 0;
+  font-size: 2rem;
+  color: hsl(0deg, 0%, 95%);
+}
+.card-set .card p {
+  line-height: 1.5rem;
+}
+.card-set .card .btn {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  margin: 1rem 0;
+  background: hsl(0deg, 0%, 95%);
+}
+.card-set .sedan-card {
+  background: hsl(31deg, 77%, 52%);
+}
+.card-set .sedan-card .btn {
+  color: hsl(31deg, 77%, 52%);
+}
+.card-set .suvs-card {
+  background: hsl(184deg, 100%, 22%);
+}
+.card-set .suvs-card .btn {
+  color: hsl(184deg, 100%, 22%);
+}
+.card-set .luxury-card {
+  background: hsl(179deg, 100%, 13%);
+}
+.card-set .luxury-card .btn {
+  color: hsl(179deg, 100%, 13%);
+}
+@media (width > 1000px) {
+  .card-set {
+    flex-direction: row;
+    max-width: 54.8rem;
+    height: 28rem;
+  }
+  .card-set .card .btn {
+    margin-top: auto;
+  }
+}/*# sourceMappingURL=index.css.map */

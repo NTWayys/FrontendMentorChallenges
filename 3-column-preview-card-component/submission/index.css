@@ -6,6 +6,8 @@
 
 body {
   background-color: hsl(0deg, 0%, 95%);
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -24,13 +26,15 @@ body {
   max-width: 30rem;
 }
 .card-set .card {
-  padding: 3rem 3.8rem;
+  padding: 3rem 2.5rem;
   color: hsla(0deg, 0%, 100%, 0.75);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 .card-set .card h3 {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
   margin: 1rem 0;
   font-size: 2rem;
   color: hsl(0deg, 0%, 95%);
@@ -68,7 +72,7 @@ body {
 @media (width > 1000px) {
   .card-set {
     flex-direction: row;
-    max-width: 54.8rem;
+    max-width: 61.5rem;
     height: 28rem;
   }
   .card-set .card .btn {

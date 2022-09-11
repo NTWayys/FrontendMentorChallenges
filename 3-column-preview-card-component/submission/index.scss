@@ -15,6 +15,8 @@ $Very-light-gray: hsl(0, 0%, 95%);
 // font-family: 'Lexend Deca', sans-serif; 400
 body {
   background-color: $Very-light-gray;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
 
   min-height: 100vh;
   display: flex;
@@ -35,13 +37,15 @@ body {
   max-width: 30rem;
 
   .card {
-    padding: 3rem 3.8rem;
+    padding: 3rem 2.5rem;
     color: $Transparent-white;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
     h3 {
+      font-family: "Big Shoulders Display", cursive;
+      font-weight: 700;
       margin: 1rem 0;
       font-size: 2rem;
       color: $Very-light-gray;
@@ -83,7 +87,7 @@ body {
   @media (width > 1000px) {
     flex-direction: row;
 
-    max-width: 54.8rem;
+    max-width: 61.5rem;
     height: 28rem;
 
     .card {

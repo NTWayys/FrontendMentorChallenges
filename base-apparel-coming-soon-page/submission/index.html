@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="logo-div">
+      <div>
+        <img src="images/logo.svg" alt="logo" />
+      </div>
+    </div>
+    <div class="brand-hero-image">
+      <img
+        srcset="images/hero-desktop.jpg 751w, images/hero-mobile.jpg 750w"
+        sizes="(max-width: 750px) 480px"
+        src="images/hero-desktop.jpg"
+        alt="brand hero image"
+      />
+    </div>
+    <div class="brand-hero-text">
+      <div>
+        <h1><span>we're</span> coming soon</h1>
+
+        <p>
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+
+        <div id="email-border" class="email-input-box">
+          <input
+            placeholder="Email Address "
+            type="email"
+            name="email"
+            id="email-input"
+          />
+          <img id="error-icon" src="images/icon-error.svg" alt="Error icon" />
+          <label id="btn" onclick="send()" class="submit-arrow-btn">
+            <img
+              id="submit-arrow"
+              src="images/icon-arrow.svg"
+              alt="Submit arrow"
+            />
+          </label>
+          <p id="error-msg"></p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function send() {
+      const email = document.getElementById("email-input");
+      const emailBorder = document.getElementById("email-border");
+      const errorIcon = document.getElementById("error-icon");
+
+      if (!email.checkValidity()) {
+        document.getElementById("error-msg").innerHTML =
+          "Please provide a valid email";
+        errorIcon.style.display = "block";
+        emailBorder.classList.add("failed");
+      } else {
+        document.getElementById("error-msg").innerHTML = "";
+        errorIcon.style.display = "none";
+        emailBorder.classList.remove("failed");
+      }
+    }
+  </script>
+</html>

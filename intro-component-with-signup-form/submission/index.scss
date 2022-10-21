@@ -1,0 +1,191 @@
+$Red: hsl(0, 100%, 74%);
+$Green: hsl(154, 59%, 51%);
+
+$Blue: hsl(248, 32%, 49%);
+
+$Dark-Blue: hsl(249, 10%, 26%);
+$Grayish-Blue: hsl(246, 25%, 77%);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 16px;
+  @media screen and (min-width: 800px) {
+    font-size: 24px;
+  }
+  @media screen and (min-width: 2000px) {
+    font-size: 30px;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: $Red;
+  min-height: 100vh;
+  > .bg-image-class {
+    min-height: 100vh;
+    margin: 0 auto;
+    color: #fff;
+    @media screen and (min-width: 800px) {
+      display: flex;
+      align-items: center;
+    }
+    width: 100%;
+    @media screen and (min-width: 480px) {
+      background-image: url(./images/bg-intro-desktop.png);
+    }
+    background-image: url(./images/bg-intro-mobile.png);
+    .container {
+      max-width: 400px;
+      @media screen and (min-width: 800px) {
+        display: flex;
+        max-width: 1440px;
+      }
+
+      margin: 0 auto;
+      max-width: 90%;
+
+      .heading {
+        @media screen and (max-width: 800px) {
+          padding-top: 5.5rem;
+        }
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+          font-weight: 700;
+          font-size: 1.75rem;
+        }
+        p {
+          font-weight: 400;
+          font-size: 1.05rem;
+          margin-top: 1rem;
+        }
+        @media screen and (min-width: 800px) {
+          max-width: 50%;
+          padding-right: 4rem;
+          text-align: left;
+
+          h1,
+          p {
+            margin: 0;
+          }
+          h1 {
+            font-size: 2rem;
+          }
+          p {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      .promotion-text {
+        margin-top: 4rem;
+        padding: 1rem 3rem;
+        background: $Blue;
+        border-radius: 0.7rem;
+
+        text-align: center;
+        box-shadow: 0 0.5rem 0 0px rgba(217, 101, 102, 1);
+        -webkit-box-shadow: 0 0.5rem 0 0px rgba(217, 101, 102, 1);
+        -moz-box-shadow: 0 0.5rem 0 0px rgba(217, 101, 102, 1);
+      }
+
+      .form-box {
+        border-radius: 0.6rem;
+        margin: 1.5rem 0;
+        padding: 0.5rem 1.2rem;
+        background: #fff;
+        form {
+          flex-direction: column;
+          display: flex;
+        }
+        .input-box {
+          margin-top: 1rem;
+          width: 100%;
+          padding: 0.75rem;
+          border: 2px solid #e8e8e8;
+          border-radius: 0.3rem;
+          color: black;
+          font-weight: 700;
+          display: flex;
+          &:focus-within {
+            border: 2px solid $Blue !important;
+          }
+          input {
+            font-weight: 600;
+            border: none;
+            width: 100%;
+            &:focus {
+              border: none;
+              outline: none;
+              -webkit-box-shadow: none;
+              box-shadow: none;
+            }
+          }
+          img {
+            visibility: hidden;
+          }
+        }
+        .error-message {
+          text-align: right;
+          font-size: 0.5rem;
+          color: $Red;
+          visibility: hidden;
+        }
+
+        .submit-btn {
+          cursor: pointer;
+          margin-top: 1rem;
+          width: 100%;
+          padding: 1.1rem 0 1rem;
+          font-size: 1.1rem;
+          color: #fff;
+          background: $Green;
+          border: none;
+          border-radius: 0.3rem;
+          box-shadow: 0 0.25rem 0 0px #2fb97e;
+          -webkit-box-shadow: 0 0.25rem 0 0px #2fb97e;
+          -moz-box-shadow: 0 0.25rem 0 0px #2fb97e;
+
+          &:hover,
+          &:focus {
+            filter: brightness(110%);
+          }
+        }
+
+        .disclaimer-text {
+          text-align: center;
+          color: black;
+          font-weight: 400;
+          font-size: 0.6rem;
+          max-width: 90%;
+          margin: 0 auto;
+          padding: 1rem 0;
+          a {
+            text-decoration: none;
+            font-weight: 600;
+            color: $Red;
+          }
+        }
+      }
+    }
+  }
+}
+
+.input-box.error {
+  border-color: $Red !important;
+  input,
+  select,
+  textarea {
+    color: $Red;
+  }
+  & + span,
+  img {
+    visibility: visible !important;
+  }
+}

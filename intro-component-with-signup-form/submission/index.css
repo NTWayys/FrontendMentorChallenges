@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+@media screen and (min-width: 800px) {
+  :root {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  :root {
+    font-size: 30px;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: hsl(0deg, 100%, 74%);
+  min-height: 100vh;
+}
+body > .bg-image-class {
+  min-height: 100vh;
+  margin: 0 auto;
+  color: #fff;
+  width: 100%;
+  background-image: url(./images/bg-intro-mobile.png);
+}
+@media screen and (min-width: 800px) {
+  body > .bg-image-class {
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 480px) {
+  body > .bg-image-class {
+    background-image: url(./images/bg-intro-desktop.png);
+  }
+}
+body > .bg-image-class .container {
+  max-width: 400px;
+  margin: 0 auto;
+  max-width: 90%;
+}
+@media screen and (min-width: 800px) {
+  body > .bg-image-class .container {
+    display: flex;
+    max-width: 1440px;
+  }
+}
+body > .bg-image-class .container .heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 800px) {
+  body > .bg-image-class .container .heading {
+    padding-top: 5.5rem;
+  }
+}
+body > .bg-image-class .container .heading h1 {
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+body > .bg-image-class .container .heading p {
+  font-weight: 400;
+  font-size: 1.05rem;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 800px) {
+  body > .bg-image-class .container .heading {
+    max-width: 50%;
+    padding-right: 4rem;
+    text-align: left;
+  }
+  body > .bg-image-class .container .heading h1,
+body > .bg-image-class .container .heading p {
+    margin: 0;
+  }
+  body > .bg-image-class .container .heading h1 {
+    font-size: 2rem;
+  }
+  body > .bg-image-class .container .heading p {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+}
+body > .bg-image-class .container .promotion-text {
+  margin-top: 4rem;
+  padding: 1rem 3rem;
+  background: hsl(248deg, 32%, 49%);
+  border-radius: 0.7rem;
+  text-align: center;
+  box-shadow: 0 0.5rem 0 0px rgb(217, 101, 102);
+  -webkit-box-shadow: 0 0.5rem 0 0px rgb(217, 101, 102);
+  -moz-box-shadow: 0 0.5rem 0 0px rgb(217, 101, 102);
+}
+body > .bg-image-class .container .form-box {
+  border-radius: 0.6rem;
+  margin: 1.5rem 0;
+  padding: 0.5rem 1.2rem;
+  background: #fff;
+}
+body > .bg-image-class .container .form-box form {
+  flex-direction: column;
+  display: flex;
+}
+body > .bg-image-class .container .form-box .input-box {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e8e8e8;
+  border-radius: 0.3rem;
+  color: black;
+  font-weight: 700;
+  display: flex;
+}
+body > .bg-image-class .container .form-box .input-box:focus-within {
+  border: 2px solid hsl(248deg, 32%, 49%) !important;
+}
+body > .bg-image-class .container .form-box .input-box input {
+  font-weight: 600;
+  border: none;
+  width: 100%;
+}
+body > .bg-image-class .container .form-box .input-box input:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+body > .bg-image-class .container .form-box .input-box img {
+  visibility: hidden;
+}
+body > .bg-image-class .container .form-box .error-message {
+  text-align: right;
+  font-size: 0.5rem;
+  color: hsl(0deg, 100%, 74%);
+  visibility: hidden;
+}
+body > .bg-image-class .container .form-box .submit-btn {
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1.1rem 0 1rem;
+  font-size: 1.1rem;
+  color: #fff;
+  background: hsl(154deg, 59%, 51%);
+  border: none;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.25rem 0 0px #2fb97e;
+  -webkit-box-shadow: 0 0.25rem 0 0px #2fb97e;
+  -moz-box-shadow: 0 0.25rem 0 0px #2fb97e;
+}
+body > .bg-image-class .container .form-box .submit-btn:hover, body > .bg-image-class .container .form-box .submit-btn:focus {
+  filter: brightness(110%);
+}
+body > .bg-image-class .container .form-box .disclaimer-text {
+  text-align: center;
+  color: black;
+  font-weight: 400;
+  font-size: 0.6rem;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+body > .bg-image-class .container .form-box .disclaimer-text a {
+  text-decoration: none;
+  font-weight: 600;
+  color: hsl(0deg, 100%, 74%);
+}
+
+.input-box.error {
+  border-color: hsl(0deg, 100%, 74%) !important;
+}
+.input-box.error input,
+.input-box.error select,
+.input-box.error textarea {
+  color: hsl(0deg, 100%, 74%);
+}
+.input-box.error + span,
+.input-box.error img {
+  visibility: visible !important;
+}/*# sourceMappingURL=index.css.map */

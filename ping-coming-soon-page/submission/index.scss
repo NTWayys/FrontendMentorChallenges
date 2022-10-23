@@ -1,0 +1,216 @@
+$Blue: hsl(223, 87%, 63%);
+
+$Pale-Blue: hsl(223, 100%, 88%);
+$Light-Red: hsl(354, 100%, 66%);
+
+$Gray: hsl(0, 0%, 59%);
+$Very-Dark-Blue: hsl(209, 33%, 12%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 20px;
+}
+img {
+  width: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  // Weights: 300, 600, 700
+  font-family: "Libre Franklin", sans-serif;
+  .container {
+    width: 90%;
+    @media screen and(min-width:500px) {
+      max-width: 750px;
+    }
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem 0;
+    @media screen and(min-width:500px) {
+      padding: 2rem;
+    }
+    .logo {
+      width: 3rem;
+      @media screen and(min-width:500px) {
+        width: 5rem;
+      }
+    }
+    .hero-text {
+      margin-top: 2rem;
+      text-align: center;
+      h1 {
+        font-size: 1.2rem;
+        @media screen and(min-width:500px) {
+          font-size: 3rem;
+        }
+        font-weight: 400;
+        color: $Gray;
+        span {
+          font-weight: 700;
+          color: $Very-Dark-Blue;
+        }
+      }
+      p {
+        margin-top: 1rem;
+        font-size: 0.7rem;
+        @media screen and(min-width:500px) {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .user-prompt {
+      text-align: center;
+      margin-top: 1.5rem;
+      width: 100%;
+      input {
+        height: 2rem;
+        border-radius: 1rem;
+        @media screen and(min-width:500px) {
+          height: 3rem;
+          border-radius: 2rem;
+        }
+
+        border: 1px solid $Pale-Blue;
+      }
+      .email-input {
+        text-indent: 2rem;
+      }
+      .error {
+        @media screen and(min-width:500px) {
+          margin-left: 1.2rem;
+        }
+        border-color: $Light-Red;
+        + span {
+          display: block !important;
+        }
+      }
+      .error-msg {
+        font-style: italic;
+        margin: 0.25rem 0 0.5rem;
+        font-weight: 600;
+        font-size: 0.55rem;
+        color: $Light-Red;
+        display: none;
+      }
+
+      .bluebtn {
+        cursor: pointer;
+        margin-top: 0.5rem;
+        font-weight: 600;
+        background: $Blue;
+        color: #fff;
+      }
+
+      @media screen and(min-width:500px) {
+        padding-bottom: 2rem;
+        .email-input {
+          text-indent: 1rem;
+          &::placeholder {
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: $Gray;
+          }
+
+          &:-ms-input-placeholder {
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: $Gray;
+          }
+
+          &::-ms-input-placeholder {
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: $Gray;
+          }
+        }
+        .bluebtn {
+          font-size: 1rem;
+          margin: 0;
+          margin-left: 1rem;
+
+          &:hover,
+          &:focus {
+            filter: brightness(110%);
+          }
+        }
+      }
+      // gridstuff
+      .email-input {
+        grid-area: a;
+      }
+      .error-msg {
+        grid-area: b;
+      }
+      .bluebtn {
+        grid-area: c;
+      }
+      padding: 0 1rem;
+      display: grid;
+      grid-auto-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "a"
+        "b"
+        "c";
+      @media screen and(min-width:500px) {
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr auto;
+        gap: 0px 0px;
+        grid-template-areas:
+          "a c"
+          "b b";
+
+        .error-msg {
+          margin-left: 2.5rem;
+          text-align: left;
+        }
+      }
+    }
+
+    .display-img {
+      margin-top: 2rem;
+      width: 100%;
+    }
+  }
+
+  footer {
+    margin-bottom: 2rem;
+    .copyrightLogos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      .copyrightLogo {
+        text-decoration: none;
+        border: 1px solid $Gray;
+        border-radius: 50%;
+        width: 1.75rem;
+        height: 1.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .copyrightText {
+      text-align: center;
+      span {
+        color: $Gray;
+        font-size: 0.6rem;
+      }
+    }
+  }
+}

@@ -14,6 +14,9 @@
 }
 
 body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
   background: hsl(204deg, 43%, 93%);
   font-family: "Karla", sans-serif;
   padding: 1rem;
@@ -59,15 +62,19 @@ body .box h1 {
   color: hsl(179deg, 62%, 43%);
   font-size: 1.2rem;
 }
-body .box h2 {
-  margin-top: 1rem;
-  font-size: 1rem;
-  color: hsl(71deg, 73%, 54%);
+body .box .small-header {
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 body .box p {
   margin-top: 1rem;
   line-height: 1.5rem;
   font-size: 0.9rem;
+}
+body .box .price-quoute {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: hsl(71deg, 73%, 54%);
 }
 body .box .pricing {
   padding-top: 0.25rem;
@@ -82,6 +89,7 @@ body .box .pricing span {
   font-size: 2rem;
 }
 body .box .signUp-btn {
+  color: #fff;
   text-decoration: none;
   display: block;
   text-align: center;

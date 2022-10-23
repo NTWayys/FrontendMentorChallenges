@@ -1,0 +1,101 @@
+$Cyan: hsl(179, 62%, 43%);
+$Bright-Yellow: hsl(71, 73%, 54%);
+
+$Light-Gray: hsl(204, 43%, 93%);
+$Grayish-Blue: hsl(218, 22%, 67%);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  // Weights: 400, 700
+  font-size: 16px;
+  @media screen and (min-width: 800px) {
+    font-size: 22px;
+  }
+}
+
+body {
+  background: $Light-Gray;
+  font-family: "Karla", sans-serif;
+  padding: 1rem;
+  .container {
+    margin: 3rem auto;
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 400px;
+    @media screen and (min-width: 800px) {
+      max-width: 800px;
+      display: grid;
+      grid-auto-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 0;
+      grid-template-areas:
+        "a a"
+        "b c";
+    }
+  }
+  .box {
+    padding: 1.5rem 2rem 1rem;
+    width: 100%;
+    &.white {
+      padding-bottom: 2rem;
+      grid-area: a;
+      background: #fff;
+      color: #000;
+    }
+    &.teal {
+      grid-area: b;
+      color: #fff;
+      background: #2bb3b1;
+    }
+    &.cyan {
+      grid-area: c;
+      color: #fff;
+      background: #4abebd;
+    }
+
+    h1 {
+      color: $Cyan;
+      font-size: 1.2rem;
+    }
+    h2 {
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: $Bright-Yellow;
+    }
+    p {
+      margin-top: 1rem;
+      line-height: 1.5rem;
+      font-size: 0.9rem;
+    }
+    .pricing {
+      padding-top: 0.25rem;
+      color: $Light-Gray;
+      display: flex;
+      align-items: center;
+      span {
+        color: #fff;
+        padding-right: 1rem;
+        font-weight: 700;
+        font-size: 2rem;
+      }
+    }
+    .signUp-btn {
+      display: block;
+      text-align: center;
+      background: $Bright-Yellow;
+      width: 100%;
+      margin-top: 2rem;
+      padding: 1rem 0;
+      border-radius: 5px;
+    }
+    li {
+      list-style: none;
+      font-weight: 400;
+      padding: 0.1rem;
+    }
+  }
+}

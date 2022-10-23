@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+@media screen and (min-width: 800px) {
+  :root {
+    font-size: 22px;
+  }
+}
+
+body {
+  background: hsl(204deg, 43%, 93%);
+  font-family: "Karla", sans-serif;
+  padding: 1rem;
+}
+body .container {
+  margin: 3rem auto;
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 400px;
+}
+@media screen and (min-width: 800px) {
+  body .container {
+    max-width: 800px;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0;
+    grid-template-areas: "a a" "b c";
+  }
+}
+body .box {
+  padding: 1.5rem 2rem 1rem;
+  width: 100%;
+}
+body .box.white {
+  padding-bottom: 2rem;
+  grid-area: a;
+  background: #fff;
+  color: #000;
+}
+body .box.teal {
+  grid-area: b;
+  color: #fff;
+  background: #2bb3b1;
+}
+body .box.cyan {
+  grid-area: c;
+  color: #fff;
+  background: #4abebd;
+}
+body .box h1 {
+  color: hsl(179deg, 62%, 43%);
+  font-size: 1.2rem;
+}
+body .box h2 {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: hsl(71deg, 73%, 54%);
+}
+body .box p {
+  margin-top: 1rem;
+  line-height: 1.5rem;
+  font-size: 0.9rem;
+}
+body .box .pricing {
+  padding-top: 0.25rem;
+  color: hsl(204deg, 43%, 93%);
+  display: flex;
+  align-items: center;
+}
+body .box .pricing span {
+  color: #fff;
+  padding-right: 1rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+body .box .signUp-btn {
+  display: block;
+  text-align: center;
+  background: hsl(71deg, 73%, 54%);
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  border-radius: 5px;
+}
+body .box li {
+  list-style: none;
+  font-weight: 400;
+  padding: 0.1rem;
+}/*# sourceMappingURL=index.css.map */

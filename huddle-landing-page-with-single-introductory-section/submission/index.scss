@@ -1,0 +1,158 @@
+$Violet: hsl(257, 40%, 49%);
+$Soft-Magenta: hsl(300, 69%, 71%);
+//     font-family: 'Open Sans', sans-serif; 400 600
+// font-family: 'Poppins', sans-serif; 400
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  .container {
+    max-width: 550px;
+    margin: 0 auto;
+
+    @media screen and (min-width: 525px) {
+      max-width: 1920px;
+      display: grid;
+      grid-auto-columns: 1fr;
+      grid-template-columns: 1.1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 0px 0px;
+      grid-template-areas: "a b";
+    }
+    .hero-img {
+      grid-area: a;
+    }
+    .hero-text {
+      grid-area: b;
+    }
+  }
+  min-height: 100vh;
+  padding: 2.4rem;
+  z-index: -2;
+  background: $Violet;
+
+  width: 100%;
+  .bg-img-holder {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/bg-mobile.svg);
+    @media screen and (min-width: 525px) {
+      background-image: url(./images/bg-desktop.svg);
+    }
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  header {
+    img {
+      width: 7.8rem;
+      @media screen and (min-width: 525px) {
+        width: 18rem;
+      }
+    }
+  }
+
+  main {
+    .hero-img {
+      margin-top: 2.8rem;
+      img {
+        width: 100%;
+      }
+    }
+
+    .hero-text {
+      margin-top: 4rem;
+      text-align: center;
+      @media screen and (min-width: 525px) {
+        margin-left: 2rem;
+        text-align: left;
+        max-width: 90%;
+      }
+      color: #fff;
+      .hero-h1 {
+        font-weight: 600;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.6rem;
+        @media screen and (min-width: 525px) {
+          margin-top: 3rem;
+          font-size: 4rem;
+        }
+      }
+      .hero-p {
+        margin-top: 1rem;
+        font-weight: 400;
+        font-family: "Poppins", sans-serif;
+        font-size: 0.9rem;
+        @media screen and (min-width: 525px) {
+          font-size: 1.6rem;
+        }
+      }
+      .btn {
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        display: block;
+        margin: 2rem auto 0;
+
+        background: #fff;
+        color: $Violet;
+        width: 13rem;
+        padding: 1rem 0;
+        border-radius: 2rem;
+
+        &:hover,
+        &:focus {
+          background: $Soft-Magenta;
+          color: #fff;
+        }
+
+        @media screen and (min-width: 525px) {
+          margin: 1.5rem 0;
+        }
+      }
+    }
+  }
+  .social-icons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (min-width: 525px) {
+      justify-content: flex-end;
+      margin-right: 3rem;
+    }
+    gap: 1rem;
+
+    .copyrightLogo {
+      text-decoration: none;
+      border: 1px solid #fff;
+      color: #fff;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      @media screen and (min-width: 525px) {
+        width: 3rem;
+        height: 3rem;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover,
+      &:focus {
+        border-color: $Soft-Magenta;
+        color: $Soft-Magenta;
+      }
+    }
+  }
+}

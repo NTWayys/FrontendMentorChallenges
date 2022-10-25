@@ -1,0 +1,256 @@
+$Blue: hsl(246, 80%, 60%);
+
+$Light-red-work: hsl(15, 100%, 70%);
+$Soft-blue-play: hsl(195, 74%, 62%);
+$Light-red-study: hsl(348, 100%, 68%);
+$Lime-green-exercise: hsl(145, 58%, 55%);
+$Violet-social: hsl(264, 64%, 52%);
+$Soft-orange-selfcare: hsl(43, 84%, 65%);
+
+$Very-dark-blue: hsl(226, 43%, 10%);
+$Dark-blue: hsl(235, 46%, 20%);
+$Desaturated-blue: hsl(235, 45%, 61%);
+$Pale-Blue: hsl(236, 100%, 87%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #0d1323;
+  // 300 400 500
+  font-family: "Rubik", sans-serif;
+  padding: 1rem;
+}
+
+.App {
+  margin: 0 auto;
+  max-width: 28rem;
+}
+h3 {
+  font-size: 1.125rem;
+}
+.userProfileContainer {
+  color: #fff;
+  background: #1d204b;
+  border-radius: 1rem;
+  .userProfile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    @media screen and (min-width: 900px) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2.5rem 1.5rem;
+    }
+    background: #5746ea;
+    .userImg {
+      border: 0.2rem solid #fff;
+      border-radius: 100%;
+      width: 100%;
+      max-width: 6rem;
+    }
+    .userInfo {
+      margin-left: 1rem;
+      min-width: 70%;
+      @media screen and (min-width: 900px) {
+        margin: 2rem 0 1rem;
+      }
+      p {
+        color: #ada3ff;
+      }
+      h2 {
+        font-weight: 300;
+        font-size: 1.5rem;
+        @media screen and (min-width: 900px) {
+          letter-spacing: 0.1rem;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  .timeStateButtons {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+    @media screen and (min-width: 900px) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 2rem;
+    }
+    button {
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      color: #666ab0;
+      font-size: 1rem;
+      @media screen and (min-width: 900px) {
+        margin: 0.5rem 0;
+      }
+      &.active,
+      &:hover,
+      &:focus {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.stat-card {
+  margin-top: 2rem;
+
+  border-radius: 1rem;
+  overflow: hidden;
+  @media screen and (min-width: 900px) {
+    max-width: 15rem;
+    margin-top: 0;
+  }
+  .stat-img {
+    margin-left: auto;
+    margin-right: 1rem;
+    height: 2.2rem;
+    width: 5rem;
+    background-repeat: no-repeat;
+    background-position: 0 25%;
+  }
+
+  .stats {
+    cursor: pointer;
+    padding: 2rem 1rem;
+    background: #1d204b;
+
+    border-radius: 1rem 1rem 0 0;
+    height: 100%;
+
+    > div {
+      margin-top: 0.5rem;
+      width: 100%;
+      // display: flex;
+      > .imgelipsis {
+        cursor: pointer;
+        width: 2rem;
+
+        &:focus,
+        &:hover {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+    .stat-headers {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      h3 {
+        font-weight: 400;
+        font-size: 1.2rem;
+
+        color: #fff;
+      }
+    }
+    .stats-values {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media screen and (min-width: 900px) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 1rem;
+      }
+
+      .currentStat {
+        color: #fff;
+        font-weight: 300;
+        font-size: 2rem;
+        @media screen and (min-width: 900px) {
+          font-size: 3rem;
+        }
+      }
+      .prevStat {
+        @media screen and (min-width: 900px) {
+          margin-top: 1rem;
+        }
+        color: #b6bbf5;
+      }
+    }
+  }
+
+  &.work {
+    background: $Light-red-work;
+    .stat-img {
+      background-image: url(./content/images/icon-work.svg);
+    }
+  }
+  &.play {
+    background: $Soft-blue-play;
+    .stat-img {
+      background-image: url(./content/images/icon-play.svg);
+    }
+  }
+  &.study {
+    background: $Light-red-study;
+    .stat-img {
+      background-image: url(./content/images/icon-study.svg);
+    }
+  }
+  &.exercise {
+    background: $Lime-green-exercise;
+    .stat-img {
+      background-image: url(./content/images/icon-exercise.svg);
+    }
+  }
+  &.social {
+    background: $Violet-social;
+    .stat-img {
+      background-image: url(./content/images/icon-social.svg);
+    }
+  }
+  &.selfcare {
+    background: $Soft-orange-selfcare;
+    .stat-img {
+      background-image: url(./content/images/icon-self-care.svg);
+    }
+  }
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.App {
+  @media screen and (min-width: 900px) {
+    max-width: 90%;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    grid-template-areas:
+      "a b c d"
+      "a e f g";
+  }
+  .userProfileContainer {
+    grid-area: a;
+  }
+  .work {
+    grid-area: b;
+  }
+  .play {
+    grid-area: c;
+  }
+  .study {
+    grid-area: d;
+  }
+  .exercise {
+    grid-area: e;
+  }
+  .social {
+    grid-area: f;
+  }
+  .selfcare {
+    grid-area: g;
+  }
+}

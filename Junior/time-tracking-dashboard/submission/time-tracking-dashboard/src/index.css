@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0d1323;
+  font-family: "Rubik", sans-serif;
+  padding: 1rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+.userProfileContainer {
+  color: #fff;
+  background: #1d204b;
+  border-radius: 1rem;
+}
+.userProfileContainer .userProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: #5746ea;
+}
+.userProfileContainer .userProfile .userImg {
+  border: 0.2rem solid #fff;
+  border-radius: 100%;
+  width: 100%;
+}
+.userProfileContainer .userProfile .userInfo {
+  margin-left: 1rem;
+  min-width: 70%;
+}
+.userProfileContainer .userProfile .userInfo p {
+  color: #ada3ff;
+}
+.userProfileContainer .userProfile .userInfo h2 {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+.userProfileContainer .timeStateButtons {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+.userProfileContainer .timeStateButtons button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: #666ab0;
+  font-size: 1rem;
+}
+.userProfileContainer .timeStateButtons button.active, .userProfileContainer .timeStateButtons button:hover, .userProfileContainer .timeStateButtons button:focus {
+  color: #fff;
+}
+
+.stat-card {
+  margin-top: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.stat-card .stat-img {
+  margin-left: auto;
+  margin-right: 1rem;
+  height: 2.2rem;
+  width: 5rem;
+  background-repeat: no-repeat;
+  background-position: 0 25%;
+}
+.stat-card .stats {
+  cursor: pointer;
+  padding: 2rem 1rem;
+  background: #1d204b;
+  border-radius: 1rem 1rem 0 0;
+}
+.stat-card .stats:hover, .stat-card .stats:focus {
+  filter: brightness(200%);
+}
+.stat-card .stats > div {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+.stat-card .stats > div .imgelipsis {
+  z-index: 2;
+  all: initial;
+  cursor: pointer;
+  width: 2rem;
+}
+.stat-card .stats > div .imgelipsis:focus, .stat-card .stats > div .imgelipsis:hover {
+  filter: brightness(0) invert(1);
+}
+.stat-card .stats .stat-headers {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.stat-card .stats .stat-headers h3 {
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.stat-card .stats .stats-values {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.stat-card .stats .stats-values .currentStat {
+  color: #fff;
+  font-weight: 300;
+  font-size: 2rem;
+}
+.stat-card .stats .stats-values .prevStat {
+  color: #b6bbf5;
+}
+.stat-card.work {
+  background: hsl(15deg, 100%, 70%);
+}
+.stat-card.work .stat-img {
+  background-image: url(./content/images/icon-work.svg);
+}
+.stat-card.play {
+  background: hsl(195deg, 74%, 62%);
+}
+.stat-card.play .stat-img {
+  background-image: url(./content/images/icon-play.svg);
+}
+.stat-card.study {
+  background: hsl(348deg, 100%, 68%);
+}
+.stat-card.study .stat-img {
+  background-image: url(./content/images/icon-study.svg);
+}
+.stat-card.exercise {
+  background: hsl(145deg, 58%, 55%);
+}
+.stat-card.exercise .stat-img {
+  background-image: url(./content/images/icon-exercise.svg);
+}
+.stat-card.social {
+  background: hsl(264deg, 64%, 52%);
+}
+.stat-card.social .stat-img {
+  background-image: url(./content/images/icon-social.svg);
+}
+.stat-card.selfcare {
+  background: hsl(43deg, 84%, 65%);
+}
+.stat-card.selfcare .stat-img {
+  background-image: url(./content/images/icon-self-care.svg);
+}/*# sourceMappingURL=index.css.map */

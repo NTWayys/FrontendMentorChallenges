@@ -47,58 +47,84 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .nav-menu-container {
-      button {
-        cursor: pointer;
-        background: transparent;
-        border: none;
-      }
-
-      .nav-menu {
-        z-index: 999;
-        animation: fadeOutRight 600ms ease-out;
-        &.open {
-          display: flex;
-          animation: fadeInRight 600ms ease-in-out;
-        }
-        &.close {
+    @media screen and (min-width: 701px) {
+      .nav-menu-container {
+        button {
           display: none;
         }
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-
-        .nav-menu-dark {
-          background: $Very-dark-blue;
-          opacity: 0.5;
-          flex: 1;
-          height: 100%;
-          filter: brightness(0.4);
-        }
-        .nav-menu-light {
-          flex: 2;
-          height: 100%;
-          background: $Off-white;
+        ul {
           display: flex;
-          flex-direction: column;
-          button {
-            margin: 2rem;
-            width: 2.5rem;
-            align-self: flex-end;
+          gap: 2rem;
+          list-style: none;
+
+          li {
+            a {
+              font-size: 1.5rem;
+              text-decoration: none;
+              color: $Dark-grayish-blue;
+              &:hover,
+              &:focus {
+                color: $Soft-red;
+              }
+            }
           }
-          ul {
-            margin-left: 2rem;
-            margin-top: 1rem;
+        }
+      }
+    }
+    @media screen and (max-width: 700px) {
+      .nav-menu-container {
+        button {
+          cursor: pointer;
+          background: transparent;
+          border: none;
+        }
+
+        .nav-menu {
+          z-index: 999;
+          animation: fadeOutRight 600ms ease-out;
+          &.open {
+            display: flex;
+            animation: fadeInRight 600ms ease-in-out;
+          }
+          &.close {
+            display: none;
+          }
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100vw;
+          height: 100vh;
+
+          .nav-menu-dark {
+            background: $Very-dark-blue;
+            opacity: 0.5;
+            flex: 1;
             height: 100%;
-            list-style: none;
-            li {
-              margin-top: 1.5rem;
-              a {
-                font-size: 1.25rem;
-                color: $Very-dark-blue;
-                text-decoration: none;
+            filter: brightness(0.4);
+          }
+          .nav-menu-light {
+            flex: 2;
+            height: 100%;
+            background: $Off-white;
+            display: flex;
+            flex-direction: column;
+            button {
+              margin: 2rem;
+              width: 2.5rem;
+              align-self: flex-end;
+            }
+            ul {
+              margin-left: 2rem;
+              margin-top: 1rem;
+              height: 100%;
+              list-style: none;
+              li {
+                margin-top: 1.5rem;
+                a {
+                  font-size: 1.25rem;
+                  color: $Very-dark-blue;
+                  text-decoration: none;
+                }
               }
             }
           }

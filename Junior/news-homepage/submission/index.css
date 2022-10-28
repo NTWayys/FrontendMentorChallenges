@@ -50,61 +50,81 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.navbar-head .navbar .nav-menu-container button {
-  cursor: pointer;
-  background: transparent;
-  border: none;
+@media screen and (min-width: 701px) {
+  .navbar-head .navbar .nav-menu-container button {
+    display: none;
+  }
+  .navbar-head .navbar .nav-menu-container ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  .navbar-head .navbar .nav-menu-container ul li a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: hsl(236deg, 13%, 42%);
+  }
+  .navbar-head .navbar .nav-menu-container ul li a:hover, .navbar-head .navbar .nav-menu-container ul li a:focus {
+    color: hsl(5deg, 85%, 63%);
+  }
 }
-.navbar-head .navbar .nav-menu-container .nav-menu {
-  z-index: 999;
-  -webkit-animation: fadeOutRight 600ms ease-out;
-          animation: fadeOutRight 600ms ease-out;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-}
-.navbar-head .navbar .nav-menu-container .nav-menu.open {
-  display: flex;
-  -webkit-animation: fadeInRight 600ms ease-in-out;
-          animation: fadeInRight 600ms ease-in-out;
-}
-.navbar-head .navbar .nav-menu-container .nav-menu.close {
-  display: none;
-}
-.navbar-head .navbar .nav-menu-container .nav-menu .nav-menu-dark {
-  background: hsl(240deg, 100%, 5%);
-  opacity: 0.5;
-  flex: 1;
-  height: 100%;
-  filter: brightness(0.4);
-}
-.navbar-head .navbar .nav-menu-container .nav-menu .nav-menu-light {
-  flex: 2;
-  height: 100%;
-  background: hsl(36deg, 100%, 99%);
-  display: flex;
-  flex-direction: column;
-}
-.navbar-head .navbar .nav-menu-container .nav-menu .nav-menu-light button {
-  margin: 2rem;
-  width: 2.5rem;
-  align-self: flex-end;
-}
-.navbar-head .navbar .nav-menu-container .nav-menu .nav-menu-light ul {
-  margin-left: 2rem;
-  margin-top: 1rem;
-  height: 100%;
-  list-style: none;
-}
-.navbar-head .navbar .nav-menu-container .nav-menu .nav-menu-light ul li {
-  margin-top: 1.5rem;
-}
-.navbar-head .navbar .nav-menu-container .nav-menu .nav-menu-light ul li a {
-  font-size: 1.25rem;
-  color: hsl(240deg, 100%, 5%);
-  text-decoration: none;
+@media screen and (max-width: 700px) {
+  .navbar-head .navbar .nav-menu-container button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+  .navbar-head .navbar .nav-menu-container .nav-menu {
+    z-index: 999;
+    -webkit-animation: fadeOutRight 600ms ease-out;
+            animation: fadeOutRight 600ms ease-out;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  .navbar-head .navbar .nav-menu-container .nav-menu.open {
+    display: flex;
+    -webkit-animation: fadeInRight 600ms ease-in-out;
+            animation: fadeInRight 600ms ease-in-out;
+  }
+  .navbar-head .navbar .nav-menu-container .nav-menu.close {
+    display: none;
+  }
+  .navbar-head .navbar .nav-menu-container .nav-menu .nav-menu-dark {
+    background: hsl(240deg, 100%, 5%);
+    opacity: 0.5;
+    flex: 1;
+    height: 100%;
+    filter: brightness(0.4);
+  }
+  .navbar-head .navbar .nav-menu-container .nav-menu .nav-menu-light {
+    flex: 2;
+    height: 100%;
+    background: hsl(36deg, 100%, 99%);
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar-head .navbar .nav-menu-container .nav-menu .nav-menu-light button {
+    margin: 2rem;
+    width: 2.5rem;
+    align-self: flex-end;
+  }
+  .navbar-head .navbar .nav-menu-container .nav-menu .nav-menu-light ul {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    height: 100%;
+    list-style: none;
+  }
+  .navbar-head .navbar .nav-menu-container .nav-menu .nav-menu-light ul li {
+    margin-top: 1.5rem;
+  }
+  .navbar-head .navbar .nav-menu-container .nav-menu .nav-menu-light ul li a {
+    font-size: 1.25rem;
+    color: hsl(240deg, 100%, 5%);
+    text-decoration: none;
+  }
 }
 
 .main-head {

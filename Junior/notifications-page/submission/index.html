@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <title>Frontend Mentor | Notifications page</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu-bar">
+        <p class="notification-count">
+          Notifications
+          <span id="notification-amount" class="notification-amount">3</span>
+        </p>
+        <button onclick="clearNotifications()">Mark all as read</button>
+      </div>
+      <div class="notification-list">
+        <div class="notification new">
+          <img src="./assets/images/avatar-mark-webber.webp" alt="" />
+          <div>
+            <p>
+              <span class="user-name"> <a href="#">Mark Webber</a></span>
+              reacted to your recent post
+              <a href="#" class="user-post">My first tournament today!</a>
+              <span class="red-dot"> &#8226; </span>
+            </p>
+            <span class="notification-time">1m ago</span>
+          </div>
+        </div>
+        <div class="notification new">
+          <img src="./assets/images/avatar-angela-gray.webp" alt="" />
+          <div>
+            <p>
+              <span class="user-name"> <a href="#">Angela Gray</a></span>
+              followed you
+              <span class="red-dot"> &#8226; </span>
+            </p>
+            <span class="notification-time">5m ago</span>
+          </div>
+        </div>
+
+        <div class="notification new">
+          <img src="./assets/images/avatar-jacob-thompson.webp" alt="" />
+          <div>
+            <p>
+              <span class="user-name"> <a href="#">Jacob Thompson</a></span> has
+              joined your group <a href="#" class="user-club">Chess Club </a
+              ><span class="red-dot"> &#8226; </span>
+            </p>
+            <span class="notification-time">1 day ago</span>
+          </div>
+        </div>
+
+        <div class="notification">
+          <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="" />
+          <div>
+            <p>
+              <span class="user-name"> <a href="#">Rizky Hasanuddin</a></span>
+              sent you a private message<span class="red-dot"> &#8226; </span>
+            </p>
+
+            <span class="notification-time"> 5 days ago</span
+            ><a href="#">
+              <p class="user-message">
+                Hello, thanks for setting up the Chess Club. I've been a member
+                for a few weeks now and I'm already having lots of fun and
+                improving my game.
+              </p></a
+            >
+          </div>
+        </div>
+
+        <div class="notification">
+          <img src="./assets/images/avatar-kimberly-smith.webp" alt="" />
+          <div>
+            <p>
+              <span class="user-name"> <a href="#">Kimberly Smith</a></span>
+              commented on your picture<span class="red-dot"> &#8226; </span>
+            </p>
+            <span class="notification-time"> 1 week ago</span>
+          </div>
+          <a href="#"><img src="./assets/images/image-chess.webp" alt="" /></a>
+        </div>
+
+        <div class="notification">
+          <img src="./assets/images/avatar-nathan-peterson.webp" alt="" />
+          <div>
+            <p>
+              <span class="user-name"> <a href="#">Nathan Peterson</a></span>
+              reacted to your recent post
+              <a href="#" class="user-post"
+                >5 end-game strategies to increase your win rate</a
+              >
+              <span class="red-dot"> &#8226; </span>
+            </p>
+            <span class="notification-time">2 weeks ago</span>
+          </div>
+        </div>
+
+        <div class="notification">
+          <img src="./assets/images/avatar-anna-kim.webp" alt="" />
+          <div>
+            <p>
+              <span class="user-name"> <a href="#">Anna Kim</a></span> left the
+              group <a href="#" class="user-club">Chess Club </a
+              ><span class="red-dot"> &#8226; </span>
+            </p>
+            <span class="notification-time">2 weeks ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

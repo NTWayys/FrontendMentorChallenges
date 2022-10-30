@@ -1,0 +1,142 @@
+$Red: hsl(1, 90%, 64%);
+$Blue: hsl(219, 85%, 26%);
+
+$White: -hsl(0, 0%, 100%);
+$Very-light-grayish-blue: hsl(210, 60%, 98%);
+$Light-grayish-blue-1: hsl(211, 68%, 94%);
+$Light-grayish-blue-2: hsl(205, 33%, 90%);
+$Grayish-blue: hsl(219, 14%, 63%);
+$Dark-grayish-blue: hsl(219, 12%, 42%);
+$Very-dark-blue: hsl(224, 21%, 14%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  // 500 800
+  font-family: "Plus Jakarta Sans", sans-serif;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+
+  .container {
+    max-width: 36rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu-bar {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+
+  .notification-count {
+    font-size: 1.2rem;
+    font-weight: 800;
+    span {
+      border-radius: 0.2rem;
+      padding: 0.1rem 0.75rem;
+      margin-left: 0.5rem;
+      background: $Blue;
+      color: $Very-light-grayish-blue;
+    }
+  }
+  button {
+    cursor: pointer;
+    font-size: 1rem;
+    background: transparent;
+    border: none;
+    color: $Dark-grayish-blue;
+  }
+}
+
+.notification-list {
+  .notification {
+    margin-top: 1.5rem;
+    border-radius: 0.75rem;
+    padding: 0.5rem;
+
+    display: flex;
+    &.new {
+      background: $Light-grayish-blue-2;
+      .red-dot {
+        display: inline;
+      }
+      .user-club {
+        color: $Blue;
+      }
+    }
+
+    img {
+      max-height: 2.5rem;
+    }
+    > div {
+      margin-left: 0.75rem;
+      margin-right: 0.25rem;
+      color: $Dark-grayish-blue;
+      font-size: 0.9rem;
+      p {
+        font-weight: 500;
+        span {
+          margin-right: 0.25rem;
+        }
+        .user-club {
+          text-decoration: none;
+          font-weight: 800;
+          &:hover,
+          &:focus {
+            color: $Blue;
+          }
+        }
+        .user-post {
+          font-weight: 800;
+          color: $Dark-grayish-blue;
+          &:hover,
+          &:focus {
+            color: $Blue;
+          }
+        }
+      }
+      .user-name {
+        font-weight: 800;
+        font-size: 1rem;
+        color: $Very-dark-blue;
+        a {
+          &:hover,
+          &:focus {
+            color: $Blue;
+          }
+        }
+      }
+      .notification-time {
+        display: block;
+        margin-top: 0.25rem;
+      }
+
+      .user-message {
+        text-decoration: none;
+        margin-top: 0.75rem;
+        border: 1px solid $Grayish-blue;
+        padding: 1rem;
+
+        &:hover,
+        &:focus {
+          background: $Light-grayish-blue-1;
+        }
+      }
+    }
+  }
+}
+.red-dot {
+  color: red;
+  font-size: 1rem;
+  line-height: 0;
+  display: none;
+}

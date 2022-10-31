@@ -10,6 +10,11 @@ body {
   padding: 1rem;
 }
 
+.App {
+  margin: 0 auto;
+  max-width: 28rem;
+}
+
 h3 {
   font-size: 1.125rem;
 }
@@ -27,14 +32,27 @@ h3 {
   border-radius: 1rem;
   background: #5746ea;
 }
+@media screen and (min-width: 900px) {
+  .userProfileContainer .userProfile {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2.5rem 1.5rem;
+  }
+}
 .userProfileContainer .userProfile .userImg {
   border: 0.2rem solid #fff;
   border-radius: 100%;
   width: 100%;
+  max-width: 6rem;
 }
 .userProfileContainer .userProfile .userInfo {
   margin-left: 1rem;
   min-width: 70%;
+}
+@media screen and (min-width: 900px) {
+  .userProfileContainer .userProfile .userInfo {
+    margin: 2rem 0 1rem;
+  }
 }
 .userProfileContainer .userProfile .userInfo p {
   color: #ada3ff;
@@ -43,10 +61,23 @@ h3 {
   font-weight: 300;
   font-size: 1.5rem;
 }
+@media screen and (min-width: 900px) {
+  .userProfileContainer .userProfile .userInfo h2 {
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+  }
+}
 .userProfileContainer .timeStateButtons {
   display: flex;
   justify-content: space-around;
   padding: 1rem 0;
+}
+@media screen and (min-width: 900px) {
+  .userProfileContainer .timeStateButtons {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 2rem;
+  }
 }
 .userProfileContainer .timeStateButtons button {
   cursor: pointer;
@@ -54,6 +85,11 @@ h3 {
   border: none;
   color: #666ab0;
   font-size: 1rem;
+}
+@media screen and (min-width: 900px) {
+  .userProfileContainer .timeStateButtons button {
+    margin: 0.5rem 0;
+  }
 }
 .userProfileContainer .timeStateButtons button.active, .userProfileContainer .timeStateButtons button:hover, .userProfileContainer .timeStateButtons button:focus {
   color: #fff;
@@ -63,6 +99,12 @@ h3 {
   margin-top: 2rem;
   border-radius: 1rem;
   overflow: hidden;
+}
+@media screen and (min-width: 900px) {
+  .stat-card {
+    max-width: 15rem;
+    margin-top: 0;
+  }
 }
 .stat-card .stat-img {
   margin-left: auto;
@@ -77,21 +119,17 @@ h3 {
   padding: 2rem 1rem;
   background: #1d204b;
   border-radius: 1rem 1rem 0 0;
-}
-.stat-card .stats:hover, .stat-card .stats:focus {
-  filter: brightness(200%);
+  height: 100%;
 }
 .stat-card .stats > div {
   margin-top: 0.5rem;
   width: 100%;
 }
-.stat-card .stats > div .imgelipsis {
-  z-index: 2;
-  all: initial;
+.stat-card .stats > div > .imgelipsis {
   cursor: pointer;
   width: 2rem;
 }
-.stat-card .stats > div .imgelipsis:focus, .stat-card .stats > div .imgelipsis:hover {
+.stat-card .stats > div > .imgelipsis:focus, .stat-card .stats > div > .imgelipsis:hover {
   filter: brightness(0) invert(1);
 }
 .stat-card .stats .stat-headers {
@@ -109,13 +147,30 @@ h3 {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (min-width: 900px) {
+  .stat-card .stats .stats-values {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+  }
+}
 .stat-card .stats .stats-values .currentStat {
   color: #fff;
   font-weight: 300;
   font-size: 2rem;
 }
+@media screen and (min-width: 900px) {
+  .stat-card .stats .stats-values .currentStat {
+    font-size: 3rem;
+  }
+}
 .stat-card .stats .stats-values .prevStat {
   color: #b6bbf5;
+}
+@media screen and (min-width: 900px) {
+  .stat-card .stats .stats-values .prevStat {
+    margin-top: 1rem;
+  }
 }
 .stat-card.work {
   background: hsl(15deg, 100%, 70%);
@@ -152,4 +207,44 @@ h3 {
 }
 .stat-card.selfcare .stat-img {
   background-image: url(./content/images/icon-self-care.svg);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 900px) {
+  .App {
+    max-width: 90%;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    grid-template-areas: "a b c d" "a e f g";
+  }
+}
+.App .userProfileContainer {
+  grid-area: a;
+}
+.App .work {
+  grid-area: b;
+}
+.App .play {
+  grid-area: c;
+}
+.App .study {
+  grid-area: d;
+}
+.App .exercise {
+  grid-area: e;
+}
+.App .social {
+  grid-area: f;
+}
+.App .selfcare {
+  grid-area: g;
 }/*# sourceMappingURL=index.css.map */

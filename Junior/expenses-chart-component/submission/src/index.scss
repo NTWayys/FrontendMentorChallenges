@@ -1,0 +1,143 @@
+$Soft-red: hsl(10, 79%, 65%);
+$Cyan: hsl(186, 34%, 60%);
+
+$Dark-brown: hsl(25, 47%, 15%);
+$Medium-brown: hsl(28, 10%, 53%);
+$Cream: hsl(27, 66%, 92%);
+$Very-pale-orange: hsl(33, 100%, 98%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 18px;
+  @media screen and( min-width:1922px) {
+    font-size: 24px;
+  }
+}
+
+body {
+  // 400 700
+  font-family: "DM Sans", sans-serif;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: $Cream;
+  padding: 0 1rem;
+}
+.container {
+  max-width: 28rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.user-balance {
+  background: $Soft-red;
+  color: $Very-pale-orange;
+  min-height: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    font-size: 0.85rem;
+  }
+  span {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+}
+.user-spending {
+  margin-top: 1rem;
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: $Very-pale-orange;
+
+  .spending-sign {
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+  .weekly-spending {
+    display: flex;
+    align-items: flex-end;
+
+    .item {
+      font-size: 0.75rem;
+      text-align: center;
+      flex: 1;
+      margin: 2.5rem 0.25rem;
+      > div {
+        border-radius: 0.25rem;
+        background: $Soft-red;
+        width: 95%;
+        margin: 0 auto;
+        position: relative;
+        cursor: pointer;
+
+        span {
+          background: $Dark-brown;
+          color: $Very-pale-orange;
+          padding: 0.25rem;
+          border-radius: 0.25rem;
+          position: absolute;
+          display: none;
+          left: 50%;
+          transform: translateX(-50%);
+          top: -1.75rem;
+        }
+
+        &:hover,
+        &:focus {
+          filter: brightness(125%);
+          span {
+            display: block;
+          }
+        }
+        &.show {
+          background: $Cyan;
+          span {
+            display: block;
+          }
+        }
+      }
+      .item-day {
+        margin-top: 0.25rem;
+        color: $Medium-brown;
+      }
+    }
+  }
+}
+
+.monthly-val {
+  border-top: 2px solid $Cream;
+  color: $Medium-brown;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  p {
+    font-size: 0.9rem;
+  }
+  #monthly-val {
+    span {
+      color: $Dark-brown;
+      font-weight: 700;
+      font-size: 1.75rem;
+      cursor: pointer;
+    }
+  }
+  .monthly-diff {
+    text-align: right;
+    span {
+      font-size: 1rem;
+    }
+  }
+}

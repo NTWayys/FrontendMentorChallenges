@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 18px;
+}
+@media screen and (min-width: 1000px) {
+  :root {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  :root {
+    font-size: 32px;
+  }
+}
+
+.App {
+  min-height: 100vh;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1000px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+.card-preview {
+  flex: 1;
+  width: 100%;
+  position: relative;
+}
+.card-preview > .card-background {
+  padding: 2rem 1rem;
+  background: url(./images/bg-main-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 13rem;
+  width: 100%;
+}
+@media screen and (min-width: 500px) {
+  .card-preview > .card-background {
+    background: url(./images/bg-main-desktop.png);
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .card-preview > .card-background {
+    width: 90%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
+.card-preview > .card-background > .card {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  max-width: 25rem;
+}
+.card-preview > .card-background > .card > .side {
+  width: 15.75rem;
+  height: 9rem;
+  border-radius: 0.5rem;
+}
+.card-preview > .card-background > .card > .side.card-back {
+  background: url(./images/bg-card-back.png);
+  background-size: cover;
+  margin-left: auto;
+  position: relative;
+  right: 0.5rem;
+}
+@media screen and (min-width: 1000px) {
+  .card-preview > .card-background > .card > .side.card-back {
+    left: auto;
+    right: -8rem;
+    bottom: -5rem;
+  }
+}
+.card-preview > .card-background > .card > .side.card-back .cardCVC {
+  color: hsl(0deg, 0%, 100%);
+  position: absolute;
+  right: 1.5rem;
+  top: 3.75rem;
+}
+.card-preview > .card-background > .card > .side.card-front {
+  background: url(./images/bg-card-front.png);
+  background-size: cover;
+  position: absolute;
+  left: 1.5rem;
+  top: 5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1000px) {
+  .card-preview > .card-background > .card > .side.card-front {
+    left: auto;
+    right: -4rem;
+    top: -5rem;
+  }
+}
+.card-preview > .card-background > .card > .side.card-front > img {
+  width: 4rem;
+}
+.card-preview > .card-background > .card > .side.card-front .card-details {
+  color: hsl(0deg, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.card-preview > .card-background > .card > .side.card-front .card-details .cardNum {
+  display: block;
+}
+.card-preview > .card-background > .card > .side.card-front .card-details > div {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.user-details {
+  flex: 1;
+  padding: 0 1.5rem;
+}
+@media screen and (min-width: 1000px) {
+  .user-details {
+    flex: 1.5;
+  }
+}
+.user-details > div {
+  margin: 0 auto;
+  margin-top: 1rem;
+  max-width: 20rem;
+}
+.user-details > div label {
+  font-size: 0.9rem;
+}
+.user-details > div input {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  margin-top: 0.3rem;
+  text-indent: 1rem;
+  width: 100%;
+  border: 1px solid hsl(270deg, 3%, 87%);
+  border-radius: 0.5rem;
+}
+.user-details > div input::-moz-placeholder {
+  color: hsl(279deg, 6%, 55%);
+  opacity: 1;
+}
+.user-details > div input:-ms-input-placeholder {
+  color: hsl(279deg, 6%, 55%);
+  opacity: 1;
+}
+.user-details > div input::placeholder {
+  color: hsl(279deg, 6%, 55%);
+  opacity: 1;
+}
+.user-details > div input:-ms-input-placeholder {
+  color: hsl(279deg, 6%, 55%);
+}
+.user-details > div input::-ms-input-placeholder {
+  color: hsl(279deg, 6%, 55%);
+}
+.user-details > div.small-details {
+  display: flex;
+}
+.user-details > div.small-details .user-date {
+  flex: 1;
+}
+.user-details > div.small-details .user-date input {
+  width: 45%;
+}
+.user-details > div.small-details .user-date input:nth-of-type(2) {
+  margin-left: 0.5rem;
+}
+.user-details > div.small-details .user-cvc {
+  margin-left: 0.5rem;
+  flex: 1;
+}
+.user-details > div .submit-btn {
+  width: 100%;
+  background: hsl(278deg, 68%, 11%);
+  border: none;
+  border-radius: 0.5rem;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.75rem 0;
+}
+.user-details > div .error {
+  display: none;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  color: hsl(0deg, 100%, 66%);
+}
+
+.failed input {
+  border-color: hsl(0deg, 100%, 66%) !important;
+}
+.failed p,
+.failed + p {
+  display: block !important;
+}/*# sourceMappingURL=index.css.map */
